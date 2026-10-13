@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+/* Moving Cloud Theme Animations */
+@keyframes cloudDriftSlow {
+  0% {
+    transform: translateX(-25%) translateY(0px);
+  }
+  50% {
+    transform: translateX(45%) translateY(-4px);
+  }
+  100% {
+    transform: translateX(115%) translateY(0px);
+  }
+}
+
+@keyframes cloudDriftMedium {
+  0% {
+    transform: translateX(-35%) translateY(2px);
+  }
+  50% {
+    transform: translateX(35%) translateY(-5px);
+  }
+  100% {
+    transform: translateX(110%) translateY(2px);
+  }
+}
+
+@keyframes cloudDriftFast {
+  0% {
+    transform: translateX(-40%) translateY(-2px);
+  }
+  50% {
+    transform: translateX(40%) translateY(4px);
+  }
+  100% {
+    transform: translateX(120%) translateY(-2px);
+  }
+}
+
+@keyframes cloudFloatSubtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes sunRaysPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.12) rotate(15deg);
+    opacity: 1;
+  }
+}
+
+@keyframes scannerLaser {
+  0% {
+    top: 6%;
+    opacity: 0.3;
+  }
+  50% {
+    top: 90%;
+    opacity: 0.95;
+  }
+  100% {
+    top: 6%;
+    opacity: 0.3;
+  }
+}
+
+@keyframes radarPulse {
+  0% {
+    transform: scale(0.92);
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.45);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 24px rgba(14, 165, 233, 0);
+  }
+  100% {
+    transform: scale(0.92);
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0);
+  }
+}
+
+.animate-cloud-slow {
+  animation: cloudDriftSlow 38s linear infinite;
+}
+
+.animate-cloud-medium {
+  animation: cloudDriftMedium 26s linear infinite;
+}
+
+.animate-cloud-fast {
+  animation: cloudDriftFast 18s linear infinite;
+}
+
+.animate-cloud-float {
+  animation: cloudFloatSubtle 5s ease-in-out infinite;
+}
+
+.animate-sun-pulse {
+  animation: sunRaysPulse 7s ease-in-out infinite;
+}
+
+.animate-scan-laser {
+  animation: scannerLaser 2.2s ease-in-out infinite;
+}
+
+.animate-radar-pulse {
+  animation: radarPulse 2.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Background Culinary Icon & Ambient Graphics Animations (Food Stories & MyFitnessPal Style) */
+@keyframes floatSwaySlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translateY(-16px) rotate(4deg) scale(1.04);
+  }
+  66% {
+    transform: translateY(-8px) rotate(-4deg) scale(0.98);
+  }
+}
+
+@keyframes floatSwayReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(-6deg);
+  }
+}
+
+@keyframes driftGentle {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  50% {
+    transform: translateX(18px) translateY(-14px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+@keyframes ambientPulseMesh {
+  0%, 100% {
+    transform: scale(1) translate(0%, 0%);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.15) translate(4%, -3%);
+    opacity: 0.75;
+  }
+}
+
+.animate-float-sway-1 {
+  animation: floatSwaySlow 8s ease-in-out infinite;
+}
+
+.animate-float-sway-2 {
+  animation: floatSwayReverse 11s ease-in-out infinite;
+}
+
+.animate-float-sway-3 {
+  animation: floatSwaySlow 14s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+.animate-float-sway-4 {
+  animation: floatSwayReverse 16s ease-in-out infinite;
+  animation-delay: -6s;
+}
+
+.animate-drift-ambient {
+  animation: driftGentle 20s ease-in-out infinite;
+}
+
+.animate-ambient-mesh {
+  animation: ambientPulseMesh 12s ease-in-out infinite;
+}
+
+@media print {
+  header, nav, button, .fixed {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Food Item Tracker",
+  "description": "Smart food inventory management with barcode camera scanner, manufacturing and expiry tracking, smart notifications, multi-cuisine leftover recipe generator, zero-waste analytics, and offline cloud sync.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
